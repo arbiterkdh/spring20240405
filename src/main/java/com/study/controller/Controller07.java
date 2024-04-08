@@ -26,4 +26,46 @@ public class Controller07 {
         resp.setContentType("text/html;charset=utf-8");
         resp.getWriter().print(result);
     }
+
+    // /main7/sub2
+    @RequestMapping("sub2")
+    public String method2() {
+        // 요청 정보 분석/ 가공
+        // 비즈니스 로직 처리
+        // 결과를 모델에 담고
+        // view 로 포워딩 (view 이름 리턴)
+        return "view1";
+    }
+
+    @RequestMapping("sub3")
+    public String method3() {
+        return "view2";
+        // /WEB-INF/view/view2.jsp 로 포워딩
+    }
+
+    @RequestMapping("sub4")
+    public String method4() {
+        return "view3";
+    }
+
+    @RequestMapping("sub5")
+    public String method5() {
+        return "/main7/sub5"; // 같은 경우가 많음
+    }
+
+    @RequestMapping("sub6")
+    public String method6() {
+        // return /main7/sub6; 과 같음.
+        return null;
+    }
+
+    @RequestMapping("sub7")
+    public void method7() {
+        // 요청 경로와 return 값이 같으면
+        // 리턴값을 void 로 변경해서 없애도 된다.
+    }
+
+    @RequestMapping("sub8")
+    public void method8() {
+    }
 }
