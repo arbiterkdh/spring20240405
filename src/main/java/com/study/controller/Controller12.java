@@ -29,8 +29,21 @@ public class Controller12 {
     @RequestMapping("sub3")
     public void method3(Model model) {
         model.addAttribute("dan", 5);
-
-
     }
 
+    @RequestMapping("sub4")
+    public void method4(Model model) {
+        model.addAttribute("myList", List.of("java", "css", "react"));
+        model.addAttribute("foods", List.of("피자", "햄버거", "찌개", "돈까스"));
+        model.addAttribute("myMap", Map.of("son", "london",
+                "lee", "paris",
+                "kim", "munchen"));
+        model.addAttribute("cars", Map.of("tesla", "usa",
+                "kia", "korea",
+                "volvo", "sweden"));
+        model.addAttribute("myList2", List.of("비비", "백예린", "피식대학"));
+        model.addAttribute("myMap2", Map.of("비비", "밤양갱",
+                "백예린", "square(2017)",
+                "검정치마", "antifreeze"));
+    }
 }
