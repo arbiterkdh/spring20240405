@@ -47,3 +47,5 @@ SELECT *
 FROM Orders
 WHERE OrderDate LIKE '%01';
 
+SELECT *
+FROM Products;
