@@ -2,8 +2,10 @@ package com.study.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
 public class MyBean258Employees {
     private int employeeId;
