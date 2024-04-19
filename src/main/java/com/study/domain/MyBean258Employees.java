@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class MyBean256Employees {
+public class MyBean258Employees {
     private int employeeId;
     private String lastName;
     private String firstName;

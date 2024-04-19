@@ -2,7 +2,6 @@
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <html>
 <head>
-    <title>Title</title>
     <style>
         table, tr, th, td {
             border: 1px solid black;
@@ -15,36 +14,17 @@
     </style>
 </head>
 <body>
-<h3>고객 정보 조회</h3>
-<%-- action 의 값이 없거나 생략되면 현재 요청 경로로 보냄 --%>
-<form action="">
-    고객명 :
-    <input type="text" value="${search}" name="name" placeholder="고객의 이름을 입력하세요">
-    <input type="submit" value="조회">
-</form>
-<hr>
-<form>
-    국가
-    <select name="country" multiple>
-        <c:forEach items="${countryList}" var="country">
-            <option value="${country}">
-                    ${country}
-            </option>
-        </c:forEach>
-    </select>
-    <button>조회</button>
-</form>
 <hr>
 <table>
     <thead>
     <tr>
-        <th>#</th>
-        <th>고객명</th>
-        <th>접근명</th>
-        <th>주소</th>
-        <th>도시</th>
-        <th>우편번호</th>
-        <th>국가</th>
+        <th>id</th>
+        <th>name</th>
+        <th>contact</th>
+        <th>address</th>
+        <th>city</th>
+        <th>post</th>
+        <th>country</th>
     </tr>
     </thead>
     <tbody>

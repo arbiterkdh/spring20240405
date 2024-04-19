@@ -2,10 +2,12 @@ package com.study.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
-public class MyBean255ProductList {
+public class MyBean256ProductList {
     private int productId;
     private String productName;
     private int supplierId;

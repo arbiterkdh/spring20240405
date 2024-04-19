@@ -22,6 +22,27 @@
     <button>조회</button>
 </form>
 <hr>
+<form>
+    카테고리 선택
+    <div>
+        <select name="categoryId" multiple>
+            <c:forEach items="${categoryList}" var="category">
+                <c:set value="false" var="selected"></c:set>
+                <c:forEach items="${prevCategoryId}" var="prevId">
+                    <c:if test="${category.id eq prevId}">
+                        <c:set var="selected" value="true"></c:set>
+                    </c:if>
+                </c:forEach>
+                <option ${selected ? "selected" : ""} value="${category.id}">${category.name}</option>
+            </c:forEach>
+        </select>
+    </div>
+    <div>
+        <button>조회</button>
+    </div>
+</form>
+
+<hr>
 <c:if test="${empty productList}" var="emptyProductList">
     <p>입력하신 상품이 없습니다.</p>
 </c:if>

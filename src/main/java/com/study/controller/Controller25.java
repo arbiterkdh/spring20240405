@@ -104,7 +104,7 @@ public class Controller25 {
 
     @GetMapping("sub4")
     public String method4(String name, Model model) throws Exception {
-        var list = new ArrayList<MyBean254Customer>();
+        var list = new ArrayList<MyBean254Customers>();
         String sql = """
                 SELECT *
                 FROM Customers
@@ -123,7 +123,7 @@ public class Controller25 {
                 String city = rs.getString(5);
                 String postalCode = rs.getString(6);
                 String country = rs.getString(7);
-                list.add(new MyBean254Customer(
+                list.add(new MyBean254Customers(
                         customerId, customerName, contactName, address, city, postalCode, country));
             }
         }
@@ -134,7 +134,7 @@ public class Controller25 {
 
     @GetMapping("sub5")
     public String method5(String name, Model model) throws Exception {
-        var list = new ArrayList<MyBean254Customer>();
+        var list = new ArrayList<MyBean254Customers>();
         String sql = """
                 SELECT * FROM Customers
                 WHERE CustomerName LIKE ?
@@ -153,7 +153,7 @@ public class Controller25 {
                 String city = rs.getString(5);
                 String postalCode = rs.getString(6);
                 String country = rs.getString(7);
-                list.add(new MyBean254Customer(
+                list.add(new MyBean254Customers(
                         customerId, customerName, contactName, address, city, postalCode, country));
             }
         }
@@ -164,7 +164,7 @@ public class Controller25 {
 
     @GetMapping("sub6")
     public String method6(String name, Model model) throws SQLException {
-        var list = new ArrayList<MyBean255ProductList>();
+        var list = new ArrayList<MyBean256ProductList>();
         String sql = """
                 SELECT * FROM Products
                 WHERE ProductName LIKE ?
@@ -184,7 +184,7 @@ public class Controller25 {
                 int categoryId = rs.getInt(4);
                 String unit = rs.getString(5);
                 double price = rs.getDouble(6);
-                list.add(new MyBean255ProductList(
+                list.add(new MyBean256ProductList(
                         productId, productName, supplierName, categoryId, unit, price));
             }
         }
@@ -197,7 +197,7 @@ public class Controller25 {
     // 조회 문자열이 contactName 또는 customerName 에 포함된 고객들 조회
     @GetMapping("sub7")
     public String method7(String name, Model model) throws SQLException {
-        var list = new ArrayList<MyBean254Customer>();
+        var list = new ArrayList<MyBean254Customers>();
         String sql = """
                 SELECT * FROM Customers
                 WHERE CustomerName LIKE ?
@@ -218,7 +218,7 @@ public class Controller25 {
                 String city = rs.getString(5);
                 String postalCode = rs.getString(6);
                 String country = rs.getString(7);
-                list.add(new MyBean254Customer(
+                list.add(new MyBean254Customers(
                         customerId, customerName, contactName, address, city, postalCode, country));
             }
         }
@@ -232,7 +232,7 @@ public class Controller25 {
 
     @GetMapping("sub8")
     public String method8(String name, Model model) throws SQLException {
-        var list = new ArrayList<MyBean256Employees>();
+        var list = new ArrayList<MyBean258Employees>();
         String sql = "SELECT * FROM Employees WHERE LastName LIKE ? OR FirstName LIKE ?";
 
         String keyword = "%" + name + "%";
@@ -249,7 +249,7 @@ public class Controller25 {
                 String birthDate = rs.getString(4);
                 String photo = rs.getString(5);
                 String notes = rs.getString(6);
-                list.add(new MyBean256Employees(
+                list.add(new MyBean258Employees(
                         employeeId, lastName, firstName, birthDate, photo, notes
                 ));
             }
