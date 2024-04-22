@@ -40,7 +40,7 @@
         </div>
         <div>
             <p class="pBox">생년월일</p>
-            <input class="inputBox" type="date" name="birthDate">
+            <input class="inputBox" type="date" name="birthDate" value="2000-01-01">
         </div>
         <div>
             <p class="pBox">사진</p>

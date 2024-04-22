@@ -18,6 +18,7 @@ import java.sql.SQLException;
 @RequestMapping("main28")
 public class Controller28 {
     @Autowired
+
     private DataSource dataSource;
 
     @GetMapping("sub1")
