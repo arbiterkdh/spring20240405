@@ -41,7 +41,7 @@ public class Controller42 {
     @GetMapping("sub4")
     @ResponseBody
     public Map<String, Object> sub4() {
-        return Map.of();
+        return Map.of("name", "son", "age", 35, "married", false);
     }
 
     @GetMapping("sub5")
