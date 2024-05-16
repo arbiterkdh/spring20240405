@@ -40,3 +40,16 @@ INSERT INTO Customers(CustomerName, ContactName, Address, City, PostalCode, Coun
 VALUES ('강동현', '킹갓왕동현', '미아동', '서울', '안알랴줌', '한국');
 # null : 값이 없음
 
+CREATE DATABASE prac0516;
+
+USE prac0516;
+
+CREATE TABLE kdh
+(
+    id     INT PRIMARY KEY AUTO_INCREMENT,
+    singer VARCHAR(50)  NOT NULL,
+    song   VARCHAR(100) NOT NULL
+);
+
+SELECT *
+FROM kdh;
