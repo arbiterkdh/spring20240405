@@ -41,4 +41,9 @@ public class Controller43 {
     public ResponseEntity sub6() {
         return ResponseEntity.status(500).build();
     }
+
+    @GetMapping("sub7")
+    public ResponseEntity sub7() {
+        return ResponseEntity.status(403).build();
+    }
 }
