@@ -16,4 +16,17 @@ public class Controller40 {
     public void method2() {
         System.out.println("Controller40.method2");
     }
+
+    // get, post /api/some-url2
+    // 요청 처리 메소드 작성
+
+    @GetMapping("/api/some-url2")
+    public void method3() {
+        System.out.println("Controller40.method3");
+    }
+
+    @PostMapping("/api/some-url2")
+    public void method4() {
+        System.out.println("Controller40.method4");
+    }
 }
