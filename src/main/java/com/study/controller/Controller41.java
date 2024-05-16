@@ -1,5 +1,6 @@
 package com.study.controller;
 
+import com.study.domain.MyBean411;
 import com.study.service.Service05;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -55,5 +56,21 @@ public class Controller41 {
         System.out.println("team = " + team.getClass());
         Object item = map.get("item");
         System.out.println("item = " + item.getClass());
+    }
+
+    @PostMapping("sub6")
+    public void sub6(@RequestBody MyBean411 myBean411) {
+        Object name = myBean411.getName();
+        System.out.println("name = " + name.getClass());
+        Object age = myBean411.getAge();
+        System.out.println("age = " + age.getClass());
+        Object married = myBean411.getMarried();
+        System.out.println("married = " + married.getClass());
+        Object team = myBean411.getTeam();
+        System.out.println("team = " + team.getClass());
+        Object item = myBean411.getItem();
+        System.out.println("item = " + item.getClass());
+        Object address = myBean411.getAddress();
+        System.out.println("address = " + address);
     }
 }
