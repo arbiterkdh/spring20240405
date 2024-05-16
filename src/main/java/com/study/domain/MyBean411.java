@@ -13,4 +13,8 @@ public class MyBean411 {
     private LinkedHashMap<String, String> team;
     private ArrayList<String> item;
     private Object address;
+
+    public String getDesc() {
+        return STR."이름은 \{name}이고 나이는 \{age} 입니다.";
+    }
 }
