@@ -29,4 +29,9 @@ public class Controller40 {
     public void method4() {
         System.out.println("Controller40.method4");
     }
+
+    @GetMapping("")
+    public void method5() {
+        System.out.println("Controller40.method5");
+    }
 }
