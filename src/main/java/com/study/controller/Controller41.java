@@ -41,4 +41,19 @@ public class Controller41 {
         service.add(map);
         System.out.println("map = " + map);
     }
+
+    @PostMapping("sub5")
+    public void sub5(@RequestBody Map<String, Object> map) {
+        System.out.println("map = " + map);
+        Object name = map.get("name");
+        System.out.println("name = " + name.getClass());
+        Object age = map.get("age");
+        System.out.println("age = " + age.getClass());
+        Object married = map.get("married");
+        System.out.println("married = " + married.getClass());
+        Object team = map.get("team");
+        System.out.println("team = " + team.getClass());
+        Object item = map.get("item");
+        System.out.println("item = " + item.getClass());
+    }
 }
