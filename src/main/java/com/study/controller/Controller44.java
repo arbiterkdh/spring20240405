@@ -70,4 +70,11 @@ public class Controller44 {
     public String ma() {
         return "매니저 또는 어드민이 접근 가능한 경로";
     }
+
+    @GetMapping("kim")
+    @ResponseBody
+    @PreAuthorize("hasAuthority('SCOPE_kim')")
+    public String kim() {
+        return "킴만 접근 가능한 경로";
+    }
 }
